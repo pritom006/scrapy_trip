@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: scrapy_user
+      POSTGRES_PASSWORD: scrapy_password
+      POSTGRES_DB: scrapy_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  scrapy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scrapy_app
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql+psycopg2://scrapy_user:scrapy_password@postgres:5432/scrapy_db"
+    volumes:
+      - .:/usr/src/app
+    command: ["scrapy", "crawl", "trip"]
+
+volumes:
+  postgres_data:

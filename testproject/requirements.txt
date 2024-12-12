@@ -1,0 +1,7 @@
+scrapy
+sqlalchemy
+psycopg2-binary
+scrapy-user-agents
+requests
+scrapy-selenium
+webdriver-manager
