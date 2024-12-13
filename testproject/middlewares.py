@@ -107,24 +107,24 @@ class TestprojectDownloaderMiddleware:
 
 
 
-class DynamicProxyMiddleware:
-    def __init__(self):
-        self.proxy_list_url = "https://www.sslproxies.org/"  # Free proxy source
-        self.proxies = []
+# class DynamicProxyMiddleware:
+#     def __init__(self):
+#         self.proxy_list_url = "https://www.sslproxies.org/"  # Free proxy source
+#         self.proxies = []
 
-    def fetch_proxies(self):
-        response = requests.get(self.proxy_list_url)
-        # Parse proxies from the response (e.g., using BeautifulSoup or regex)
-        # For simplicity, assuming a parsed list of proxies:
-        self.proxies = [
-            "http://123.123.123.123:8080",
-            "http://111.222.333.444:3128",
-        ]
+#     def fetch_proxies(self):
+#         response = requests.get(self.proxy_list_url)
+#         # Parse proxies from the response (e.g., using BeautifulSoup or regex)
+#         # For simplicity, assuming a parsed list of proxies:
+#         self.proxies = [
+#             "http://123.123.123.123:8080",
+#             "http://111.222.333.444:3128",
+#         ]
 
-    def process_request(self, request, spider):
-        if not self.proxies:
-            self.fetch_proxies()
-        request.meta['proxy'] = random.choice(self.proxies)
+#     def process_request(self, request, spider):
+#         if not self.proxies:
+#             self.fetch_proxies()
+#         request.meta['proxy'] = random.choice(self.proxies)
 
 
 

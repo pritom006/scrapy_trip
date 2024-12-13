@@ -15,7 +15,7 @@ class TestprojectItem(scrapy.Item):
     longitude = scrapy.Field()
     room_type = scrapy.Field()
     price = scrapy.Field()
-    images = scrapy.Field()
+    # images = scrapy.Field()
 
     
     # Fields for quotes

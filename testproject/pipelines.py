@@ -36,7 +36,7 @@ class Property(Base):
     longitude = Column(Float, nullable=True)
     room_type = Column(String, nullable=True)
     price = Column(String, nullable=True)
-    images = Column(String, nullable=True)
+    # images = Column(String, nullable=True)
 
 class TestprojectPipeline:
     def open_spider(self, spider):
@@ -44,8 +44,8 @@ class TestprojectPipeline:
         self.engine = create_engine(spider.settings.get('DATABASE_URL'))
         Base.metadata.create_all(self.engine)  # Create tables if they don't exist
         self.Session = sessionmaker(bind=self.engine)
-        self.image_dir = os.path.join(spider.settings.get("FILES_STORE", "./images"))
-        os.makedirs(self.image_dir, exist_ok=True)
+        # self.image_dir = os.path.join(spider.settings.get("FILES_STORE", "./images"))
+        # os.makedirs(self.image_dir, exist_ok=True)
 
     def close_spider(self, spider):
         self.engine.dispose()
@@ -56,16 +56,16 @@ class TestprojectPipeline:
         session = self.Session()
 
         # Save images
-        image_paths = []
-        for image_url in adapter.get("images", []):
-            image_name = os.path.basename(image_url)
-            image_path = os.path.join(self.image_dir, image_name)
-            response = requests.get(image_url, stream=True)
-            if response.status_code == 200:
-                with open(image_path, "wb") as f:
-                    for chunk in response.iter_content(1024):
-                        f.write(chunk)
-                image_paths.append(image_path)
+        # image_paths = []
+        # for image_url in adapter.get("images", []):
+        #     image_name = os.path.basename(image_url)
+        #     image_path = os.path.join(self.image_dir, image_name)
+        #     response = requests.get(image_url, stream=True)
+        #     if response.status_code == 200:
+        #         with open(image_path, "wb") as f:
+        #             for chunk in response.iter_content(1024):
+        #                 f.write(chunk)
+        #         image_paths.append(image_path)
 
         # Save to database
         property_data = Property(
@@ -76,7 +76,7 @@ class TestprojectPipeline:
             longitude=adapter.get("longitude"),
             room_type=adapter.get("room_type"),
             price=adapter.get("price"),
-            images=",".join(image_paths),
+            # images=",".join(image_paths),
         )
         session.add(property_data)
         session.commit()

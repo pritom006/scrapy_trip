@@ -1,0 +1,152 @@
+{
+    "inboundCities": [
+        {
+            "cityName": "Unknown City",
+            "hotels": [
+                {
+                    "hotelName": "Best Western Heritage",
+                    "rating": 4.5,
+                    "location": "Dolphin Circle, Kolatoli, Cox's Bazar, Chittagong, 4700, Bangladesh",
+                    "latitude": 21.4087,
+                    "longitude": 91.9888,
+                    "roomType": "N/A",
+                    "price": 52,
+                    "imageUrl": "/0583g12000d4c510iF7CE.jpg"
+                },
+                {
+                    "hotelName": "Impulse Ocean View",
+                    "rating": 1,
+                    "location": "Plot#69, Block# A, Hotel Motel Zone, Cox's Bazar, Chittagong, 4700, Bangladesh",
+                    "latitude": 21.426586,
+                    "longitude": 91.979659,
+                    "roomType": "N/A",
+                    "price": 21,
+                    "imageUrl": "/0584312000dfo82av150B.jpg"
+                }
+            ]
+        },
+        {
+            "cityName": "Unknown City",
+            "hotels": [
+                {
+                    "hotelName": "White Palace Hotel",
+                    "rating": 4.2,
+                    "location": "House no: 25, Road-06, Sector-09, Dhaka, House 25 Road No. 6, Uttara, Dhaka, Dhaka Division, 1230, Bangladesh",
+                    "latitude": 23.879744,
+                    "longitude": 90.39683,
+                    "roomType": "N/A",
+                    "price": 24,
+                    "imageUrl": "/0581612000d3euoz5C29D.jpg"
+                },
+                {
+                    "hotelName": "Hotel Afford Inn",
+                    "rating": 3.9,
+                    "location": "House 04 Road-03, Uttara, Dhaka, Dhaka Division, 1230, Bangladesh",
+                    "latitude": 23.85611,
+                    "longitude": 90.403093,
+                    "roomType": "N/A",
+                    "price": 25,
+                    "imageUrl": "/0221y120009uosuq43515.jpg"
+                },
+                {
+                    "hotelName": "The Westin Dhaka",
+                    "rating": 4.5,
+                    "location": "Main Gulshan Avenue, Plot-01 Rd 45, Gulshan, Dhaka, Dhaka Division, 1212, Bangladesh",
+                    "latitude": 23.793288,
+                    "longitude": 90.414718,
+                    "roomType": "N/A",
+                    "price": 134,
+                    "imageUrl": "/220w0z000000mxlzdF2B5.jpg"
+                },
+                {
+                    "hotelName": "Grand Vistana",
+                    "rating": 4.6,
+                    "location": "Uttara Model Town | Sector: 1 | House: 11 | Road: 06 |, Uttara, Dhaka, Dhaka Division, 1230, Bangladesh",
+                    "latitude": 23.856941,
+                    "longitude": 90.401835,
+                    "roomType": "N/A",
+                    "price": 29,
+                    "imageUrl": "/1mc5z12000gjtddur706C.jpg"
+                },
+                {
+                    "hotelName": "Crowne Plaza Dhaka Gulshan",
+                    "rating": 4.7,
+                    "location": "6A Madani Ave, Gulshan, Dhaka, Dhaka Division, 1212, Bangladesh",
+                    "latitude": 23.79459,
+                    "longitude": 90.41395,
+                    "roomType": "N/A",
+                    "price": 87,
+                    "imageUrl": "/0585812000cvq1sip15F9.jpg"
+                },
+                {
+                    "hotelName": "Dhaka Regency Hotel & Resort Limited",
+                    "rating": 3.8,
+                    "location": "Airport Rd, Dhaka, Dhaka Division, 1229, Bangladesh",
+                    "latitude": 23.829347,
+                    "longitude": 90.419461,
+                    "roomType": "N/A",
+                    "price": 62,
+                    "imageUrl": "/0581j12000cs51an0887C.jpg"
+                },
+                {
+                    "hotelName": "Blossom Hotel Dhaka",
+                    "rating": 4.1,
+                    "location": "House# 5, Road# 1/A, Block# J, Baridhara, US Embassy Rd, Baridhara, Dhaka, Dhaka Division, 1212, Bangladesh",
+                    "latitude": 23.797509,
+                    "longitude": 90.425268,
+                    "roomType": "N/A",
+                    "price": 14,
+                    "imageUrl": "/0584p12000dwzcihz8DCE.jpg"
+                },
+                {
+                    "hotelName": "Best Western Plus Maple Leaf",
+                    "rating": 4.3,
+                    "location": "Maple Leaf Hotel, Plot 1B, Rd No 1, Uttara, Dhaka, Dhaka Division, 1230, Bangladesh",
+                    "latitude": 23.855243,
+                    "longitude": 90.404097,
+                    "roomType": "N/A",
+                    "price": 79,
+                    "imageUrl": "/200k0s000000i31cdA937.jpg"
+                },
+                {
+                    "hotelName": "Hotel Grand Circle Inn",
+                    "rating": 4,
+                    "location": "12 Outer Circular Rd, Motijheel, Dhaka, Dhaka Division, 1217, Bangladesh",
+                    "latitude": 23.741173,
+                    "longitude": 90.418581,
+                    "roomType": "N/A",
+                    "price": 17,
+                    "imageUrl": "/0220k12000ab794b48AEC.jpg"
+                },
+                {
+                    "hotelName": "Pan Pacific Sonargaon Dhaka",
+                    "rating": 4.3,
+                    "location": "107 Kazi Nazrul Islam Ave, Ramna, Dhaka, Dhaka Division, 1215, Bangladesh",
+                    "latitude": 23.749489,
+                    "longitude": 90.394466,
+                    "roomType": "N/A",
+                    "price": 104,
+                    "imageUrl": "/02271120009h92ygsEDDE.jpg"
+                }
+            ]
+        },
+        {
+            "cityName": "Unknown City",
+            "hotels": []
+        }
+    ],
+    "outboundCities": [
+        {
+            "cityName": "Unknown City",
+            "hotels": []
+        },
+        {
+            "cityName": "Unknown City",
+            "hotels": []
+        },
+        {
+            "cityName": "Unknown City",
+            "hotels": []
+        }
+    ]
+}
