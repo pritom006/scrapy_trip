@@ -17,8 +17,8 @@ class TestprojectPipeline:
         self.engine = create_engine(spider.settings.get('DATABASE_URL'))
         Base.metadata.create_all(self.engine)  # Create tables if they don't exist
         self.Session = sessionmaker(bind=self.engine)
-        # self.image_dir = os.path.join(spider.settings.get("FILES_STORE", "./images"))
-        # os.makedirs(self.image_dir, exist_ok=True)
+        self.image_dir = os.path.join(spider.settings.get("FILES_STORE", "./images"))
+        os.makedirs(self.image_dir, exist_ok=True)
 
     def close_spider(self, spider):
         self.engine.dispose()
@@ -29,7 +29,7 @@ class TestprojectPipeline:
         session = self.Session()
 
         # Save images
-        image_url = adapter.get("images")  # Use 'images' or 'imageUrl' based on your field name
+        image_url = adapter.get("imageUrl")  # Use 'images' or 'imageUrl' based on your field name
         image_paths = []
         if image_url:
             image_name = os.path.basename(image_url)
