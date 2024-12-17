@@ -5,3 +5,5 @@ scrapy-user-agents
 requests
 scrapy-selenium
 webdriver-manager
+pytest==7.4.0
+pytest-cov==4.1.0

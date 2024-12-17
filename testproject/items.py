@@ -8,22 +8,15 @@ import scrapy
 
 class TestprojectItem(scrapy.Item):
     # Fields for trip
-    title = scrapy.Field()
+    hotelName = scrapy.Field()
     rating = scrapy.Field()
     location = scrapy.Field()
     latitude = scrapy.Field()
     longitude = scrapy.Field()
-    room_type = scrapy.Field()
+    roomName = scrapy.Field()
     price = scrapy.Field()
-    # images = scrapy.Field()
+    imageUrl = scrapy.Field()
+    city_id = scrapy.Field()
 
     
-    # Fields for quotes
-    # text = scrapy.Field()
-    # author = scrapy.Field()
-    # tags = scrapy.Field()
 
-    # Fields for books
-    # title = scrapy.Field()
-    # price = scrapy.Field()
-    # availability = scrapy.Field()

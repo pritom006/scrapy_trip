@@ -33,14 +33,9 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     "scrapy.downloadermiddlewares.useragent.UserAgentMiddleware": None,
-    #'scrapy_selenium.SeleniumMiddleware': 800,
-    #'testproject.middlewares.DynamicProxyMiddleware': 610,
-    #'testproject.middlewares.CustomSeleniumMiddleware': 800,
 }
 
-# SELENIUM_DRIVER_NAME = "chrome"
-# SELENIUM_DRIVER_EXECUTABLE_PATH = ChromeDriverManager().install()
-# SELENIUM_DRIVER_ARGUMENTS = ["--headless", "--disable-gpu", "--no-sandbox"]
+
 
 FILES_STORE = "./images"
 
