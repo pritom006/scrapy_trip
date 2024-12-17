@@ -88,6 +88,10 @@ The project is composed of the following services:
 
 ## Database Setup
 The PostgreSQL database will automatically be initialized with the user and database specified in the environment variables.
+To see database:
+```bash
+docker exec -it postgres_db psql -U scrapy_user -d scrapy_db
+```
 
 ## Running the Scrapy Crawler
 To start the Scrapy crawler:
