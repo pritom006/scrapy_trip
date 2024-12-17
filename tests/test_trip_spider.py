@@ -1,7 +1,6 @@
 import scrapy
-from scrapy.http import HtmlResponse
+from scrapy.http import HtmlResponse, Request
 from testproject.spiders.trip import TripSpider
-import json
 
 def test_parse():
     # Sample HTML response containing a mock JSON script
@@ -63,12 +62,19 @@ def test_parse_hotels():
     </html>
     """
 
-    # Mock the response
-    response = HtmlResponse(url="https://uk.trip.com/hotels/list?city=123", body=html_content, encoding='utf-8')
+    # Mock the request with meta data
+    request = Request(
+        url="https://uk.trip.com/hotels/list?city=123", 
+        meta={"city_id": "123", "city_name": "London"}
+    )
 
-    # Spider meta information
-    response.meta['city_id'] = "123"
-    response.meta['city_name'] = "London"
+    # Mock the response with the request
+    response = HtmlResponse(
+        url="https://uk.trip.com/hotels/list?city=123", 
+        body=html_content, 
+        encoding='utf-8',
+        request=request
+    )
 
     # Instantiate the spider
     spider = TripSpider()
@@ -85,3 +91,5 @@ def test_parse_hotels():
     assert item["roomName"] == "Deluxe"
     assert item["price"] == "100"
     assert item["imageUrl"] == "img.jpg"
+    assert item["city_id"] == "123"
+    
